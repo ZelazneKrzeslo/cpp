@@ -1,0 +1,30 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int tab[2][2];
+	int x, y;
+		for (x = 0; x < 2; x++)
+			{
+				for (y = 0; y < 2; y++)
+					{
+						cin >> tab[x][y];
+					}
+			}
+
+
+
+		for (x = 0; x < 2; x++)
+			{
+				for (y = 0; y < 2; y++)
+					{
+						cout << tab[x][y] << "  ";
+					}
+				cout << endl;
+			}
+
+	int mac = tab[0][0] * tab[1][1] - (tab[1][0] * tab[0][1]);
+	cout << "Wyznacznik macierzy: " << mac << endl;
+}

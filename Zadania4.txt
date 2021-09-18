@@ -1,0 +1,25 @@
+#include <cstdlib>
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+int main(){
+    int tab[10];
+    int liczba = 0;
+    
+    srand(time(NULL));
+    for(int j=0; j<10; j++){
+        tab[j] = rand() % 25 + 1;
+    }
+    for(int j=0; j<10; j++){
+        cout << tab[j] << ".";
+    }
+    cout << endl;
+    for(int j=0; j<10; j++){
+        if(tab[j] > liczba){
+            liczba = tab[j];
+        }
+    }
+    cout << "Element maksymalny =" << liczba << endl;
+}
