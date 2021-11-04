@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <cstdlib>
 #include <ctime>
 
@@ -6,14 +6,12 @@ using namespace std;
 
 int main()
 {
-    int iloscgraczy, rzut, przyciskok, random, random2, random3, random4, random5, random6, random7, random8, wynik, wynikrundy3, wynikrundy4;
+    int iloscgraczy, rzut, przyciskok, random, random2, random3, random4, random5, random6, random7, random8, wynikremisu, wynikremisu2, wynikremisu3, wynikremisu4, wynikremisu5, wynikremisu6, wynikremisu7, wynikremisu8;
     int Koncowywynik1 = 0;
     int Koncowywynik2 = 0;
     int Koncowywynik3 = 0;
     int Koncowywynik4 = 0;
     string gracz1, gracz2, gracz3, gracz4;
-    int wynikgracza1;
-    int wynikgracza2;
     random = rand() % 6 + 1;
     random2 = rand() % 6 + 1;
     random3 = rand() % 6 + 1;
@@ -148,9 +146,34 @@ int main()
             Koncowywynik1 += random + random2;
             Koncowywynik2 += random3 + random4;
 
+
+        wynikremisu = rand() % 6 + 1;
+        wynikremisu2 = rand() % 6 + 1;
+        wynikremisu3 = rand() % 6 + 1;
+        wynikremisu4 = rand() % 6 + 1;
+        wynikremisu5 = rand() % 6 + 1;
+        wynikremisu6 = rand() % 6 + 1;
+        wynikremisu7 = rand() % 6 + 1;
+        wynikremisu8 = rand() % 6 + 1;
+
+        if (random + random2 == random3 + random4)
+        {
+            cout << "==================" << endl;
+            cout << "||     REMIS    ||" << endl;
+            cout << "==================" << endl;
+            cout << "                  " << endl;
+            cout << "                  " << endl;
+            cout << "===========================" << endl;
+            cout << "||     Wynik remisu :    || " << endl;
+            cout << "|| " << gracz1 << ":" << wynikremisu + wynikremisu2 << "||" << endl;
+            cout << "|| " << gracz2 << ":" << wynikremisu3 + wynikremisu4 << "||" << endl;
+            cout << "===========================" << endl;
+
+            Koncowywynik1 += wynikremisu + wynikremisu2;
+            Koncowywynik2 += wynikremisu3 + wynikremisu4;
         }
     }
-
+}
     if (iloscgraczy == 3)
     {
         for (int i = 1; i < 7; i++)
@@ -177,9 +200,56 @@ int main()
             Koncowywynik2 += random3 + random4;
             Koncowywynik3 += random5 + random6;
 
+        if (random + random2 == random3 + random4)
+        {
+            cout << "==================" << endl;
+            cout << "||     REMIS    ||" << endl;
+            cout << "==================" << endl;
+            cout << "                  " << endl;
+            cout << "                  " << endl;
+            cout << "===========================" << endl;
+            cout << "||     Wynik remisu :    || " << endl;
+            cout << "|| " << gracz1 << ":" << wynikremisu + wynikremisu2 << "||" << endl;
+            cout << "|| " << gracz2 << ":" << wynikremisu3 + wynikremisu4 << "||" << endl;
+            cout << "===========================" << endl;
+
+            Koncowywynik1 += wynikremisu + wynikremisu2;
+            Koncowywynik2 += wynikremisu3 + wynikremisu4;
+        }
+        else if (random + random2 == random5 + random6)
+        {
+            cout << "==================" << endl;
+            cout << "||     REMIS    ||" << endl;
+            cout << "==================" << endl;
+            cout << "                  " << endl;
+            cout << "                  " << endl;
+            cout << "===========================" << endl;
+            cout << "||     Wynik remisu :    || " << endl;
+            cout << "|| " << gracz1 << ":" << wynikremisu + wynikremisu2 << "||" << endl;
+            cout << "|| " << gracz3 << ":" << wynikremisu5 + wynikremisu6 << "||" << endl;
+            cout << "===========================" << endl;
+
+            Koncowywynik1 += wynikremisu + wynikremisu2;
+            Koncowywynik3 += wynikremisu3 + wynikremisu4;
+        }
+        else if (random3 + random4 == random5 + random6)
+        {
+            cout << "==================" << endl;
+            cout << "||     REMIS    ||" << endl;
+            cout << "==================" << endl;
+            cout << "                  " << endl;
+            cout << "                  " << endl;
+            cout << "===========================" << endl;
+            cout << "||     Wynik remisu :    || " << endl;
+            cout << "|| " << gracz2 << ":" << wynikremisu3 + wynikremisu4 << "||" << endl;
+            cout << "|| " << gracz3 << ":" << wynikremisu5 + wynikremisu6 << "||" << endl;
+            cout << "===========================" << endl;
+
+            Koncowywynik2 += wynikremisu3 + wynikremisu4;
+            Koncowywynik3 += wynikremisu5 + wynikremisu6;
         }
     }
-
+}
     if (iloscgraczy == 4)
     {
         for (int i = 1; i < 7; i++)
@@ -210,9 +280,139 @@ int main()
             Koncowywynik3 += random5 + random6;
             Koncowywynik4 += random7 + random8;
 
+        if (random + random2 == random3 + random4)
+        {
+            cout << "==================" << endl;
+            cout << "||     REMIS    ||" << endl;
+            cout << "==================" << endl;
+            cout << "                  " << endl;
+            cout << "                  " << endl;
+            cout << "===========================" << endl;
+            cout << "||     Wynik remisu :    || " << endl;
+            cout << "|| " << gracz1 << ":" << wynikremisu + wynikremisu2 << "||" << endl;
+            cout << "|| " << gracz2 << ":" << wynikremisu3 + wynikremisu4 << "||" << endl;
+            cout << "===========================" << endl;
+
+            Koncowywynik1 += wynikremisu + wynikremisu2;
+            Koncowywynik2 += wynikremisu3 + wynikremisu4;
+        }
+        else if (random + random2 == random5 + random6)
+        {
+            cout << "==================" << endl;
+            cout << "||     REMIS    ||" << endl;
+            cout << "==================" << endl;
+            cout << "                  " << endl;
+            cout << "                  " << endl;
+            cout << "===========================" << endl;
+            cout << "||     Wynik remisu :    || " << endl;
+            cout << "|| " << gracz1 << ":" << wynikremisu + wynikremisu2 << "||" << endl;
+            cout << "|| " << gracz3 << ":" << wynikremisu5 + wynikremisu6 << "||" << endl;
+            cout << "===========================" << endl;
+
+            Koncowywynik1 += wynikremisu + wynikremisu2;
+            Koncowywynik3 += wynikremisu3 + wynikremisu4;
+        }
+        else if (random3 + random4 == random5 + random6)
+        {
+            if (random + random2 == random3 + random4)
+            {
+                cout << "==================" << endl;
+                cout << "||     REMIS    ||" << endl;
+                cout << "==================" << endl;
+                cout << "                  " << endl;
+                cout << "                  " << endl;
+                cout << "===========================" << endl;
+                cout << "||     Wynik remisu :    || " << endl;
+                cout << "|| " << gracz1 << ":" << wynikremisu + wynikremisu2 << "||" << endl;
+                cout << "|| " << gracz2 << ":" << wynikremisu3 + wynikremisu4 << "||" << endl;
+                cout << "===========================" << endl;
+
+                Koncowywynik1 += wynikremisu + wynikremisu2;
+                Koncowywynik2 += wynikremisu3 + wynikremisu4;
+            }
+            else if (random + random2 == random5 + random6)
+            {
+                cout << "==================" << endl;
+                cout << "||     REMIS    ||" << endl;
+                cout << "==================" << endl;
+                cout << "                  " << endl;
+                cout << "                  " << endl;
+                cout << "===========================" << endl;
+                cout << "||     Wynik remisu :    || " << endl;
+                cout << "|| " << gracz1 << ":" << wynikremisu + wynikremisu2 << "||" << endl;
+                cout << "|| " << gracz3 << ":" << wynikremisu5 + wynikremisu6 << "||" << endl;
+                cout << "===========================" << endl;
+
+                Koncowywynik1 += wynikremisu + wynikremisu2;
+                Koncowywynik3 += wynikremisu3 + wynikremisu4;
+            }
+            else if (random3 + random4 == random5 + random6)
+            {
+                cout << "==================" << endl;
+                cout << "||     REMIS    ||" << endl;
+                cout << "==================" << endl;
+                cout << "                  " << endl;
+                cout << "                  " << endl;
+                cout << "===========================" << endl;
+                cout << "||     Wynik remisu :    || " << endl;
+                cout << "|| " << gracz2 << ":" << wynikremisu3 + wynikremisu4 << "||" << endl;
+                cout << "|| " << gracz3 << ":" << wynikremisu5 + wynikremisu6 << "||" << endl;
+                cout << "===========================" << endl;
+
+                Koncowywynik2 += wynikremisu3 + wynikremisu4;
+                Koncowywynik3 += wynikremisu5 + wynikremisu6;
+            }
+        }
+        else if (random + random2 == random7 + random8)
+        {
+            cout << "==================" << endl;
+            cout << "||     REMIS    ||" << endl;
+            cout << "==================" << endl;
+            cout << "                  " << endl;
+            cout << "                  " << endl;
+            cout << "===========================" << endl;
+            cout << "||     Wynik remisu :    || " << endl;
+            cout << "|| " << gracz1 << ":" << wynikremisu + wynikremisu2 << "||" << endl;
+            cout << "|| " << gracz4 << ":" << wynikremisu7 + wynikremisu8 << "||" << endl;
+            cout << "===========================" << endl;
+
+            Koncowywynik1 += wynikremisu + wynikremisu2;
+            Koncowywynik4 += wynikremisu7 + wynikremisu8;
+        }
+        else if (random3 + random4 == random7 + random8)
+        {
+        cout << "==================" << endl;
+        cout << "||     REMIS    ||" << endl;
+        cout << "==================" << endl;
+        cout << "                  " << endl;
+        cout << "                  " << endl;
+        cout << "===========================" << endl;
+        cout << "||     Wynik remisu :    || " << endl;
+        cout << "|| " << gracz2 << ":" << wynikremisu3 + wynikremisu4 << "||" << endl;
+        cout << "|| " << gracz4 << ":" << wynikremisu7 + wynikremisu8 << "||" << endl;
+        cout << "===========================" << endl;
+
+        Koncowywynik1 += wynikremisu3 + wynikremisu4;
+        Koncowywynik4 += wynikremisu7 + wynikremisu8;
+        }
+        else if (random5 + random6 == random7 + random8)
+        {
+        cout << "==================" << endl;
+        cout << "||     REMIS    ||" << endl;
+        cout << "==================" << endl;
+        cout << "                  " << endl;
+        cout << "                  " << endl;
+        cout << "===========================" << endl;
+        cout << "||     Wynik remisu :    || " << endl;
+        cout << "|| " << gracz3 << ":" << wynikremisu5 + wynikremisu6 << "||" << endl;
+        cout << "|| " << gracz4 << ":" << wynikremisu7 + wynikremisu8 << "||" << endl;
+        cout << "===========================" << endl;
+
+        Koncowywynik1 += wynikremisu5 + wynikremisu6;
+        Koncowywynik4 += wynikremisu7 + wynikremisu8;
         }
     }
-
+}
     cout << "                                           " << endl;
     cout << "                                           " << endl;
     cout << "                                           " << endl;
@@ -230,8 +430,6 @@ int main()
     cout << "||" << gracz3 << "||" << Koncowywynik3 << " || " << endl;
     cout << "||" << gracz4 << "||" << Koncowywynik4 << " || " << endl;
     cout << "===========================" << endl;
-
-
 
 
 }
