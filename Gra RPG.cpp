@@ -38,6 +38,7 @@ int leczenie(int n) {
 
 int main()
 {
+    srand(time(0));
     int klasa;
     string nick;
     statystyki postaci[10];
@@ -46,50 +47,50 @@ int main()
     postaci[0].hp = 150;
     postaci[0].mana = 80;
 
-    postaci[0].nazwa = "waleczny";
-    postaci[0].atak = 60;
-    postaci[0].hp = 200;
-    postaci[0].mana = 50;
+    postaci[1].nazwa = "waleczny";
+    postaci[1].atak = 60;
+    postaci[1].hp = 200;
+    postaci[1].mana = 50;
 
-    postaci[0].nazwa = "aka: Gandalf";
-    postaci[0].atak = 40;
-    postaci[0].hp = 140;
-    postaci[0].hp = 150;
+    postaci[2].nazwa = "aka: Gandalf";
+    postaci[2].atak = 40;
+    postaci[2].hp = 140;
+    postaci[2].hp = 150;
 
-    postaci[0].nazwa = "obrazenio przyjmiciel";
-    postaci[0].atak = 40;
-    postaci[0].hp = 240;
-    postaci[0].mana = 50;
+    postaci[3].nazwa = "obrazenio przyjmiciel";
+    postaci[3].atak = 40;
+    postaci[3].hp = 240;
+    postaci[3].mana = 50;
 
-    postaci[0].nazwa = "poslaniec samego boga";
-    postaci[0].atak = 60;
-    postaci[0].hp = 170;
-    postaci[0].mana = 80;
+    postaci[4].nazwa = "poslaniec samego boga";
+    postaci[4].atak = 60;
+    postaci[4].hp = 170;
+    postaci[4].mana = 80;
 
-    postaci[0].nazwa = "Norbert Gierczak";
-    postaci[0].atak = 70;
-    postaci[0].hp = 200;
-    postaci[0].mana = 50;
+    postaci[5].nazwa = "Norbert Gierczak";
+    postaci[5].atak = 70;
+    postaci[5].hp = 200;
+    postaci[5].mana = 50;
 
-    postaci[0].nazwa = "najbardziej usseles klasa jaka tu zrobilem xD";
-    postaci[0].atak = 20;
-    postaci[0].hp = 150;
-    postaci[0].mana = 150;
+    postaci[6].nazwa = "najbardziej usseles klasa jaka tu zrobilem xD";
+    postaci[6].atak = 20;
+    postaci[6].hp = 150;
+    postaci[6].mana = 150;
 
-    postaci[0].nazwa = "inaczej: conan";
-    postaci[0].atak = 90;
-    postaci[0].hp = 160;
-    postaci[0].mana = 80;
+    postaci[7].nazwa = "inaczej: conan";
+    postaci[7].atak = 90;
+    postaci[7].hp = 160;
+    postaci[7].mana = 80;
 
-    postaci[0].nazwa = "z ciemnoscibojca";
-    postaci[0].atak = 110;
-    postaci[0].hp = 140;
-    postaci[0].mana = 80;
+    postaci[8].nazwa = "z ciemnoscibojca";
+    postaci[8].atak = 110;
+    postaci[8].hp = 140;
+    postaci[8].mana = 80;
 
-    postaci[0].nazwa = "dziadek z lasu";
-    postaci[0].atak = 40;
-    postaci[0].hp = 160;
-    postaci[0].mana = 100;
+    postaci[9].nazwa = "dziadek z lasu";
+    postaci[9].atak = 40;
+    postaci[9].hp = 160;
+    postaci[9].mana = 100;
 
     cout << "Witam w tej bardzo dobrze zrobionej (:tf:) grze rpg xd" << endl;
     cout << "                " << endl;
@@ -191,11 +192,11 @@ int main()
     int enemy;
     int atakEnemy;
 
-    przeciwnicy statystykiEnemy[11];
+    przeciwnicy statystykiEnemy[10];
 
-    while (postaci[0].hp >= 0) {
-        enemy = rand() % 10;
-        atakEnemy = rand() % 3 + 1;
+    while (postaci[klasa - 1].hp > 0) {
+        enemy = (rand() % 10) + 1;
+        atakEnemy = (rand() % 3) + 1;
 
         switch (enemy) {
         case 1:
@@ -204,64 +205,64 @@ int main()
             statystykiEnemy[0].atak = 30;
             break;
         case 2:
-            statystykiEnemy[0].nazwa = "Wsciekla,malpa";
-            statystykiEnemy[0].hp = 60;
-            statystykiEnemy[0].atak = 100;
+            statystykiEnemy[1].nazwa = "Wsciekla,malpa";
+            statystykiEnemy[1].hp = 60;
+            statystykiEnemy[1].atak = 100;
             break;
         case 3:
-            statystykiEnemy[0].nazwa = "bardzo,zla,malpa";
-            statystykiEnemy[0].hp = 100;
-            statystykiEnemy[0].atak = 70;
+            statystykiEnemy[2].nazwa = "bardzo,zla,malpa";
+            statystykiEnemy[2].hp = 100;
+            statystykiEnemy[2].atak = 70;
             break;
         case 4:
-            statystykiEnemy[0].nazwa = "WK,dzik";
-            statystykiEnemy[0].hp = 250;
-            statystykiEnemy[0].atak = 70;
+            statystykiEnemy[3].nazwa = "WK,dzik";
+            statystykiEnemy[3].hp = 250;
+            statystykiEnemy[3].atak = 70;
             break;
         case 5:
-            statystykiEnemy[0].nazwa = "Czarny,pajak";
-            statystykiEnemy[0].hp = 100;
-            statystykiEnemy[0].atak = 50;
+            statystykiEnemy[4].nazwa = "Czarny,pajak";
+            statystykiEnemy[4].hp = 100;
+            statystykiEnemy[4].atak = 50;
             break;
         case 6:
-            statystykiEnemy[0].nazwa = "Utopiec";
-            statystykiEnemy[0].hp = 90;
-            statystykiEnemy[0].atak = 60;
+            statystykiEnemy[5].nazwa = "Utopiec";
+            statystykiEnemy[5].hp = 90;
+            statystykiEnemy[5].atak = 60;
             break;
         case 7:
-            statystykiEnemy[0].nazwa = "Tata,z,klapkiem";
-            statystykiEnemy[0].hp = 200;
-            statystykiEnemy[0].atak = 40;
+            statystykiEnemy[6].nazwa = "Tata,z,klapkiem";
+            statystykiEnemy[6].hp = 200;
+            statystykiEnemy[6].atak = 40;
             break;
         case 8:
-            statystykiEnemy[0].nazwa = "Ksiadz";
-            statystykiEnemy[0].hp = 150;
-            statystykiEnemy[0].atak = 70;
+            statystykiEnemy[7].nazwa = "Ksiadz";
+            statystykiEnemy[7].hp = 150;
+            statystykiEnemy[7].atak = 70;
             break;
         case 9:
-            statystykiEnemy[0].nazwa = "Ocelot";
-            statystykiEnemy[0].hp = 80;
-            statystykiEnemy[0].atak = 60;
+            statystykiEnemy[8].nazwa = "Ocelot";
+            statystykiEnemy[8].hp = 80;
+            statystykiEnemy[8].atak = 60;
             break;
         case 10:
-            statystykiEnemy[0].nazwa = "Pan Bilicki";
-            statystykiEnemy[0].hp = 500;
-            statystykiEnemy[0].atak = 60;
+            statystykiEnemy[9].nazwa = "Pan Bilicki";
+            statystykiEnemy[9].hp = 500;
+            statystykiEnemy[9].atak = 60;
             break;
         default:
             zlakomenda();
             break;
         }
-        cout << "Idac szlakiem bawari napotkales: " << statystykiEnemy[0].nazwa << endl;
-        cout << "hp przeciwnika: " << statystykiEnemy[0].hp << endl;
-        cout << "ad przeciwnika: " << statystykiEnemy[0].atak << endl;
-        while (postaci[0].hp = true && statystykiEnemy[0].hp == 0) {
-            cout << postaci[0].nazwa << endl;
-            cout << "hp : " << postaci[0].hp << endl;
-            cout << "ad: " << postaci[0].atak << endl;
-            cout << statystykiEnemy[0].nazwa << endl;
-            cout << "hp: " << statystykiEnemy[0].hp << endl;
-            cout << "ad: " << statystykiEnemy[0].atak << endl;
+        cout << "Idac szlakiem bawari napotkales: " << statystykiEnemy[enemy - 1].nazwa << endl;
+        cout << "hp przeciwnika: " << statystykiEnemy[enemy - 1].hp << endl;
+        cout << "ad przeciwnika: " << statystykiEnemy[enemy - 1].atak << endl;
+        while (postaci[klasa - 1].hp > 0 && statystykiEnemy[enemy - 1].hp > 0) {
+            cout << postaci[klasa - 1].nazwa << endl;
+            cout << "hp : " << postaci[klasa - 1].hp << endl;
+            cout << "ad: " << postaci[klasa - 1].atak << endl;
+            cout << statystykiEnemy[enemy - 1].nazwa << endl;
+            cout << "hp: " << statystykiEnemy[enemy - 1].hp << endl;
+            cout << "ad: " << statystykiEnemy[enemy - 1].atak << endl;
             cout << " " << endl;
             cout << "Twoja tura:" << endl;
             cout << "1. Zwykly atak" << endl;
@@ -271,60 +272,60 @@ int main()
             cin >> atak;
             switch (atak) {
             case 1:
-                cout << "Uzyles basic ataku" << postaci[0].atak;
-                statystykiEnemy[0].hp = statystykiEnemy[0].hp - postaci[0].atak;
+                cout << "Uzyles basic ataku: " << postaci[klasa - 1].atak << endl;
+                statystykiEnemy[enemy - 1].hp = statystykiEnemy[enemy - 1].hp - postaci[klasa - 1].atak;
                 break;
             case 2:
-                cout << "Uzyles mocniejszego ataku" << atakowanie(postaci[0].atak);
-                statystykiEnemy[0].hp = statystykiEnemy[0].hp - atakowanie(postaci[0].atak);
-                postaci[0].mana = postaci[0].mana - 10;
+                cout << "Uzyles mocniejszego ataku: " << atakowanie(postaci[klasa - 1].atak) << endl;
+                statystykiEnemy[enemy - 1].hp = statystykiEnemy[enemy - 1].hp - atakowanie(postaci[klasa - 1].atak);
+                postaci[klasa - 1].mana = postaci[klasa - 1].mana - 10;
                 break;
             case 3:
-                cout << "Uzyles ulta: " << ultimate(postaci[0].atak);
-                statystykiEnemy[0].hp = statystykiEnemy[0].hp - ultimate(postaci[0].atak);
-                postaci[0].mana = postaci[0].mana - 30;
+                cout << "Uzyles ulta: " << ultimate(postaci[klasa - 1].atak) << endl;
+                statystykiEnemy[enemy - 1].hp = statystykiEnemy[enemy - 1].hp - ultimate(postaci[klasa - 1].atak);
+                postaci[klasa - 1].mana = postaci[klasa - 1].mana - 30;
                 break;
             case 4:
                 cout << "Uzyles leczenia, odnowiles sobie HP marnujac runde" << endl;
-                statystykiEnemy[0].hp = statystykiEnemy[0].hp + leczenie(postaci[0].hp);
+                postaci[klasa - 1].hp = postaci[klasa - 1].hp + leczenie(postaci[klasa - 1].hp);
                 break;
             default:
                 zlakomenda();
                 break;
             }
-        }
-            cout << "Teraz " << statystykiEnemy[0].nazwa << " wali ci hita ";
+        
+            cout << "Teraz " << statystykiEnemy[enemy - 1].nazwa << " wali ci hita ";
             switch (atakEnemy) {
             case 1:
-                cout << " zwyklego ataku. Zadal ci: " << statystykiEnemy[0].atak << endl;
-                postaci[0].hp = postaci[0].hp - statystykiEnemy[0].atak;
+                cout << " zwyklego ataku. Zadal ci: " << statystykiEnemy[enemy - 1].atak << endl;
+                postaci[klasa - 1].hp = postaci[klasa - 1].hp - statystykiEnemy[enemy - 1].atak;
                 break;
             case 2:
-                cout << " mocnego ataku. Zadal ci: " << atakowanie(statystykiEnemy[0].atak) << endl;
-                postaci[0].hp = postaci[0].hp - atakowanie(statystykiEnemy[0].atak);
-                cout << "twoje HP: " + postaci[0].hp << endl;
+                cout << " mocnego ataku. Zadal ci: " << atakowanie(statystykiEnemy[enemy - 1].atak) << endl;
+                postaci[klasa - 1].hp = postaci[klasa - 1].hp - atakowanie(statystykiEnemy[enemy - 1].atak);
+                cout << "twoje HP: " + postaci[klasa - 1].hp << endl;
                 break;
             case 3:
-                cout << " super ataku. Zadal ci: " << ultimate(statystykiEnemy[0].atak) << endl;
-                postaci[0].hp = postaci[0].hp - ultimate(statystykiEnemy[0].atak);
-                cout << "twoje HP: " + postaci[0].hp << endl;
+                cout << " super ataku. Zadal ci: " << ultimate(statystykiEnemy[enemy - 1].atak) << endl;
+                postaci[klasa - 1].hp = postaci[klasa - 1].hp - ultimate(statystykiEnemy[enemy - 1].atak);
+                cout << "twoje HP: " + postaci[klasa - 1].hp << endl;
                 break;
             default:
                 zlakomenda();
                 break;
             }
-
         }
-        if (statystykiEnemy[0].hp > 0) {
-            cout << "Udało ci się przeżyć odnawiasz sobie sporą część hp" << endl;
-            cout << " " << endl;
-            postaci[0].hp = postaci[0].hp + 50;
-            cout << "\n Odpoczywasz po wygranym pojedynku, twoja mana powoli sie odnawia." << endl;
-            postaci[0].mana = postaci[0].mana + 0.6 * postaci[0].mana;
-        }
-        else if (postaci[0].hp <= 0) {
+         if (postaci[klasa - 1].hp <= 0) {
             cout << "No to co, laduj sie do grobu" << endl;
-            postaci[0].hp = 0;
+            postaci[klasa - 1].hp = 0;
             return 0;
         }
+        if (statystykiEnemy[enemy - 1].hp > 0) {
+            cout << "UdaĹ‚o ci siÄ™ przeĹĽyÄ‡ odnawiasz sobie sporÄ… czÄ™Ĺ›Ä‡ hp" << endl;
+            cout << " " << endl;
+            postaci[klasa - 1].hp = postaci[klasa - 1].hp + 50;
+            cout << "\n Odpoczywasz po wygranym pojedynku, twoja mana powoli sie odnawia." << endl;
+            postaci[klasa - 1].mana = postaci[klasa - 1].mana + 0.6 * postaci[klasa - 1].mana;
+        }
+    }
     }
