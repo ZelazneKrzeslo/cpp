@@ -1,0 +1,23 @@
+#include <cstdlib>
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+	string imie[10] {"Beata", "Oliwier", "Anon", "Olaf", "Jatryk", "Tomasz", "Mateusz", "Oles", "Filip", "Marek"};
+	string Nazwisko[10]{ "Sobotka", "Pilch", "Nita", "Palczewski", "Mielewczyk", "Zubrzycki", "Dragon", "Golebiewski", "Rudnicki", "Nowak" };
+
+	srand(time(NULL));
+	int j;
+	int d;
+
+    for (int i = 0; i < 10; i++)
+    {
+        j = rand() % 10;
+        d = rand() % 10;
+        cout << "Osoba nr " << i + 1 << ": " << imie[j] << " " << Nazwisko[d] << endl;
+    }
+	
+}
