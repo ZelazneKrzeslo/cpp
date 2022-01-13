@@ -1,0 +1,80 @@
+#include <iostream>
+
+using namespace std;
+
+struct Pracownik
+{
+	string imie;
+	string nazw;
+	string stan; 
+	double pen_brut;
+};
+
+void zlakomenda() {
+	system("cls");
+	cout << "No i kaplica wykrzaczyl pan program FeelsBadMan" << endl;
+}
+
+int main()
+{
+    Pracownik* tab = new Pracownik[10];
+    int x = 1;
+    int operacja;
+    int taknie;
+
+	cout << "Witaj uzytkowniku co chcialbys dzisiaj zrobic?" << endl;
+    cout << "1. Dodaj pracownika" << endl;
+    cout << "2. Wyswietl pracownika" << endl;
+    cout << "3. Usun pracownika" << endl;
+    cout << "4. Edytuj stanowisko" << endl;
+    cout << "5. Zakoncz program" << endl;
+    cin >> operacja;
+
+    switch (operacja) {
+    case 1:
+        do
+        {
+            system("cls");
+            cout << "DODAJ PRACOWNIKA" << endl;
+            cout << " " << endl;
+            cout << "imie: " << endl;
+            cin >> tab[x].imie;
+            cout << " " << endl;
+            cout << "nazwisko: " << endl;
+            cin >> tab[x].nazw;
+            cout << " " << endl;
+            cout << "stanowisko: " << endl;
+            cin >> tab[x].stan;
+            cout << " " << endl;
+            cout << "pensja brutto: " << endl;
+            cin >> tab[x].pen_brut;
+            cout << " " << endl;
+            cout << "czy chcesz dodać kolejną osobę?" << endl;
+            cin >> taknie;
+        } while (taknie == 0);
+        break;
+    case 2:
+        system("cls");
+        cout << "witam witam" << endl;
+        break;
+    case 3:
+        system("cls");
+        cout << "witam witam" << endl;
+        break; 
+    case 4:
+        system("cls");
+        cout << "witam witam" << endl;
+        break;
+    default:
+        system("cls");
+        cout << "Dziekuje za skorzystanie z programu" << endl;
+        cout << " " << endl;
+        cout << " " << endl;
+        cout << " " << endl;
+        cout << " " << endl;
+        cout << " " << endl;
+        cout << " " << endl;
+        cout << "Kusmier enterprises - wszelkie prawa zastrzezone" << endl;
+        return 0;
+    }
+}
